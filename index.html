@@ -21,7 +21,7 @@
     background:var(--paper);
     color:var(--ink);
     font-family:var(--font-body);
-    line-height:1.5;
+    line-height:1.6;
   }
   a{color:inherit; text-decoration:none;}
   .topbar{
@@ -60,32 +60,30 @@
     font-size:.85rem;
     font-weight:600;
   }
-  nav a:hover{ color:var(--red); }
   main{
-    max-width:1080px;
+    max-width:760px;
     margin:0 auto;
     padding:24px 20px 60px;
   }
-  .hero{
-    display:grid;
-    grid-template-columns:1.6fr 1fr;
-    gap:24px;
-    padding-bottom:24px;
-    border-bottom:1px solid var(--line);
-    margin-bottom:24px;
-  }
-  .hero-main .tag{
+  .tag{
     color:var(--red);
     font-weight:700;
     font-size:.78rem;
+    letter-spacing:.02em;
   }
-  .hero-main h2{
+  article h1.title{
     font-family:var(--font-head);
-    font-size:2.1rem;
-    line-height:1.15;
-    margin:8px 0 10px;
+    font-size:1.9rem;
+    line-height:1.2;
+    margin:10px 0 8px;
   }
-  .hero-main .img-ph, .card .img-ph{
+  .byline{
+    color:var(--gray);
+    font-size:.82rem;
+    font-style:italic;
+    margin-bottom:18px;
+  }
+  .img-ph{
     background:linear-gradient(135deg,var(--paper-2),var(--line));
     border:1px solid var(--line);
     aspect-ratio:16/9;
@@ -93,64 +91,22 @@
     align-items:center;
     justify-content:center;
     color:var(--gray);
-    font-size:.75rem;
-    margin-bottom:10px;
+    font-size:.8rem;
+    margin-bottom:18px;
   }
-  .hero-main p{ color:#3a3a34; font-size:.95rem; }
-  .hero-side{ display:flex; flex-direction:column; gap:16px; }
-  .hero-side .item{
-    display:flex; gap:10px;
-    padding-bottom:14px;
-    border-bottom:1px solid var(--line);
+  article p{
+    margin-bottom:16px;
+    font-size:1rem;
+    color:#2a2a24;
   }
-  .hero-side .item:last-child{ border:none; }
-  .hero-side .num{
-    font-family:var(--font-head);
-    font-size:1.4rem;
-    color:var(--line);
-    font-weight:700;
-    min-width:26px;
+  article p.note{
+    font-size:.85rem;
+    font-style:italic;
+    color:var(--gray);
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin-top:20px;
   }
-  .hero-side h3{ font-size:.92rem; line-height:1.3; }
-  .hero-side .tag{ color:var(--red); font-size:.7rem; font-weight:700; }
-  .section-title{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:14px;
-  }
-  .section-title h2{
-    font-family:var(--font-head);
-    font-size:1.3rem;
-    color:var(--ink);
-  }
-  .section-title .bar{
-    width:5px; height:20px; background:var(--red);
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin-bottom:36px;
-  }
-  .card .tag{ color:var(--red); font-size:.72rem; font-weight:700; }
-  .card h3{
-    font-family:var(--font-head);
-    font-size:1.05rem;
-    line-height:1.3;
-    margin:6px 0;
-  }
-  .card p{ font-size:.85rem; color:var(--gray); }
-  .ticker{
-    background:var(--red);
-    color:#fff;
-    padding:8px 20px;
-    font-size:.82rem;
-    font-weight:600;
-    display:flex;
-    gap:10px;
-  }
-  .ticker b{ background:#fff; color:var(--red); padding:1px 8px; border-radius:2px; }
   footer{
     background:var(--ink);
     color:var(--paper-2);
@@ -160,8 +116,6 @@
   }
   footer p{ opacity:.7; margin-top:6px; }
   @media (max-width:720px){
-    .hero{ grid-template-columns:1fr; }
-    .grid{ grid-template-columns:1fr; }
     .masthead h1{ font-size:2.1rem; }
   }
 </style>
@@ -177,94 +131,40 @@
   </header>
   <nav>
     <a href="#">Beranda</a>
-    <a href="#">Nasional</a>
-    <a href="#">Ekonomi</a>
-    <a href="#">Olahraga</a>
-    <a href="#">Teknologi</a>
-    <a href="#">Hiburan</a>
-    <a href="#">Otomotif</a>
-    <a href="#">Internasional</a>
+    <a href="#">Industri</a>
+    <a href="#">Ketenagakerjaan</a>
+    <a href="#">Lingkungan</a>
+    <a href="#">Daerah</a>
   </nav>
-  <div class="ticker">
-    <b>TERBARU</b>
-    <span>Ini contoh berita berjalan — ganti dengan headline asli kamu di sini.</span>
-  </div>
+
   <main>
-    <section class="hero">
-      <div class="hero-main">
-        <div class="img-ph">Gambar Headline</div>
-        <span class="tag">NASIONAL</span>
-        <h2>Judul Berita Utama Diletakkan di Sini, Buat Sekilas Menjelaskan Isinya</h2>
-        <p>Ini paragraf ringkasan berita utama. Ganti dengan lead berita asli.</p>
-      </div>
-      <div class="hero-side">
-        <div class="item">
-          <span class="num">01</span>
-          <div>
-            <span class="tag">EKONOMI</span>
-            <h3>Judul berita kedua yang cukup menarik perhatian pembaca</h3>
-          </div>
-        </div>
-        <div class="item">
-          <span class="num">02</span>
-          <div>
-            <span class="tag">TEKNOLOGI</span>
-            <h3>Judul berita ketiga soal perkembangan teknologi terbaru</h3>
-          </div>
-        </div>
-        <div class="item">
-          <span class="num">03</span>
-          <div>
-            <span class="tag">OLAHRAGA</span>
-            <h3>Judul berita keempat tentang hasil pertandingan semalam</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="section-title"><div class="bar"></div><h2>Terpopuler</h2></div>
-    <div class="grid">
-      <div class="card">
-        <div class="img-ph">Gambar</div>
-        <span class="tag">OTOMOTIF</span>
-        <h3>Contoh judul berita populer nomor satu di kategori ini</h3>
-        <p>Cuplikan singkat isi berita untuk menarik pembaca mengklik.</p>
-      </div>
-      <div class="card">
-        <div class="img-ph">Gambar</div>
-        <span class="tag">HIBURAN</span>
-        <h3>Contoh judul berita populer nomor dua di kategori ini</h3>
-        <p>Cuplikan singkat isi berita untuk menarik pembaca mengklik.</p>
-      </div>
-      <div class="card">
-        <div class="img-ph">Gambar</div>
-        <span class="tag">INTERNASIONAL</span>
-        <h3>Contoh judul berita populer nomor tiga di kategori ini</h3>
-        <p>Cuplikan singkat isi berita untuk menarik pembaca mengklik.</p>
-      </div>
-    </div>
-    <div class="section-title"><div class="bar"></div><h2>Ekonomi</h2></div>
-    <div class="grid">
-      <div class="card">
-        <div class="img-ph">Gambar</div>
-        <h3>Judul berita ekonomi pertama yang bisa kamu ganti nanti</h3>
-        <p>Ringkasan singkat berita ekonomi.</p>
-      </div>
-      <div class="card">
-        <div class="img-ph">Gambar</div>
-        <h3>Judul berita ekonomi kedua yang bisa kamu ganti nanti</h3>
-        <p>Ringkasan singkat berita ekonomi.</p>
-      </div>
-      <div class="card">
-        <div class="img-ph">Gambar</div>
-        <h3>Judul berita ekonomi ketiga yang bisa kamu ganti nanti</h3>
-        <p>Ringkasan singkat berita ekonomi.</p>
-      </div>
-    </div>
+    <article>
+      <span class="tag">INDUSTRI &amp; KETENAGAKERJAAN</span>
+      <h1 class="title">Menyusuri IMIP: Cerita dari Balik Antrean Halte Bus Karyawan</h1>
+      <p class="byline">Ditulis berdasarkan pengalaman langsung seorang karyawan di kawasan industri, dilengkapi data dan laporan lapangan.</p>
+      <div class="img-ph">Gambar Ilustrasi</div>
+
+      <p>Setiap pagi, ribuan karyawan di kawasan Indonesia Morowali Industrial Park (IMIP) memulai hari dengan rutinitas yang sama — jalan kaki menuju halte, mengantre bus, lalu menempuh perjalanan ke tempat kerja masing-masing. Berikut gambaran dari sudut pandang salah satu karyawan yang tinggal di kos sekitar jalan poros.</p>
+
+      <p>Perjalanan biasanya dimulai dengan jalan kaki 15–20 menit menuju halte, dilanjutkan lewat beberapa titik transit — Halte Pos 1 SMI, Halte HPL, hingga Halte Rusun — sebelum akhirnya sampai di perusahaan tempat bekerja. Namun rute ini tidak berlaku sama untuk semua orang; ada yang naik motor pribadi, ada yang lewat jalur Pos 3, dan jam kerja pun berbeda-beda tergantung perusahaan tempat masing-masing bertugas.</p>
+
+      <p>Fasilitas bus antar-jemput gratis dari perusahaan sebenarnya cukup membantu, tapi bukan tanpa kendala. Waktu tunggu di halte kadang lama karena bus tak kunjung datang, ditambah budaya antre yang belum tertib membuat suasana naik bus sering berdesak-desakan.</p>
+
+      <p>Soal rekrutmen, sistem pendaftaran IMIP diketahui terus berubah dari waktu ke waktu. Bagi yang berminat melamar kerja, disarankan mengecek langsung informasi resmi terbaru dari IMIP, bukan hanya dari artikel ini.</p>
+
+      <p><strong>Di balik pertumbuhan pesatnya, kawasan ini juga menghadapi persoalan yang tak kalah nyata.</strong> Sebagai motor utama hilirisasi nikel nasional, IMIP menampung puluhan ribu pekerja — mencapai 89.849 orang pada awal 2026. Namun, warga di desa-desa sekitar kawasan berulang kali menyuarakan keluhan soal polusi udara, terutama dari aktivitas PLTU batu bara yang menunjang operasional pabrik. Penelitian independen bahkan mencatat kadar debu dan sulfur dioksida di sejumlah desa sudah melebihi ambang batas aman, dan angka kasus ISPA di sekitar kawasan tercatat cukup tinggi. Aksi protes warga soal debu dan asap ini pun beberapa kali terjadi hingga tahun ini.</p>
+
+      <p>Selain isu lingkungan, keamanan kendaraan juga jadi keresahan yang terus berulang. Pencurian motor di area parkiran maupun di sekitar tempat kos karyawan bukan lagi kejadian langka — sejumlah pekerja bahkan menyebut hampir setiap hari ada laporan motor hilang di lingkungan kerja. Persoalan ini sempat berujung tragis pada pertengahan 2025, ketika seorang karyawan tewas akibat main hakim sendiri usai dituduh mencuri motor — sebuah pengingat bahwa persoalan keamanan di kawasan ini sudah cukup mendesak untuk mendapat perhatian serius.</p>
+
+      <p class="note">Artikel ini ditulis berdasarkan pengalaman langsung penulis sebagai karyawan di kawasan IMIP, dilengkapi data dari sejumlah laporan lapangan dan penelitian terkait.</p>
+    </article>
   </main>
+
   <footer>
     <div>WARTAKINI</div>
-    <p>© 2026 WartaKini. Situs ini adalah kerangka awal — isi dan kembangkan sesuai kebutuhan.</p>
+    <p>© 2026 WartaKini. Semua konten ditulis berdasarkan pengalaman dan riset penulis.</p>
   </footer>
+
 <script>
   const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
   const bulan=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
