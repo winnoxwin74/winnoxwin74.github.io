@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WARTAKINI — Kabar Terkini, Tepercaya</title>
+<style>
+  :root{
+    --ink:#141b2e;
+    --paper:#f7f4ec;
+    --paper-2:#efe9d8;
+    --red:#b3231c;
+    --gold:#a9772c;
+    --line:#d9d1bb;
+    --gray:#5c5a52;
+    --font-head: Georgia, 'Times New Roman', serif;
+    --font-body: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none;}
+  .topbar{
+    background:var(--ink);
+    color:var(--paper);
+    font-size:0.78rem;
+    padding:6px 20px;
+    display:flex;
+    justify-content:space-between;
+    letter-spacing:.02em;
+  }
+  .masthead{
+    padding:22px 20px 14px;
+    text-align:center;
+    border-bottom:3px solid var(--ink);
+  }
+  .masthead h1{
+    font-family:var(--font-head);
+    font-size:3rem;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .masthead h1 span{ color:var(--red); }
+  .masthead p{
+    color:var(--gray);
+    font-size:.85rem;
+    margin-top:4px;
+  }
+  nav{
+    background:var(--paper-2);
+    border-bottom:1px solid var(--line);
+    display:flex;
+    gap:22px;
+    padding:10px 20px;
+    overflow-x:auto;
+    font-size:.85rem;
+    font-weight:600;
+  }
+  nav a:hover{ color:var(--red); }
+  main{
+    max-width:1080px;
+    margin:0 auto;
+    padding:24px 20px 60px;
+  }
+  .hero{
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:24px;
+    padding-bottom:24px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:24px;
+  }
+  .hero-main .tag{
+    color:var(--red);
+    font-weight:700;
+    font-size:.78rem;
+  }
+  .hero-main h2{
+    font-family:var(--font-head);
+    font-size:2.1rem;
+    line-height:1.15;
+    margin:8px 0 10px;
+  }
+  .hero-main .img-ph, .card .img-ph{
+    background:linear-gradient(135deg,var(--paper-2),var(--line));
+    border:1px solid var(--line);
+    aspect-ratio:16/9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gray);
+    font-size:.75rem;
+    margin-bottom:10px;
+  }
+  .hero-main p{ color:#3a3a34; font-size:.95rem; }
+  .hero-side{ display:flex; flex-direction:column; gap:16px; }
+  .hero-side .item{
+    display:flex; gap:10px;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-side .item:last-child{ border:none; }
+  .hero-side .num{
+    font-family:var(--font-head);
+    font-size:1.4rem;
+    color:var(--line);
+    font-weight:700;
+    min-width:26px;
+  }
+  .hero-side h3{ font-size:.92rem; line-height:1.3; }
+  .hero-side .tag{ color:var(--red); font-size:.7rem; font-weight:700; }
+  .section-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .section-title h2{
+    font-family:var(--font-head);
+    font-size:1.3rem;
+    color:var(--ink);
+  }
+  .section-title .bar{
+    width:5px; height:20px; background:var(--red);
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:36px;
+  }
+  .card .tag{ color:var(--red); font-size:.72rem; font-weight:700; }
+  .card h3{
+    font-family:var(--font-head);
+    font-size:1.05rem;
+    line-height:1.3;
+    margin:6px 0;
+  }
+  .card p{ font-size:.85rem; color:var(--gray); }
+  .ticker{
+    background:var(--red);
+    color:#fff;
+    padding:8px 20px;
+    font-size:.82rem;
+    font-weight:600;
+    display:flex;
+    gap:10px;
+  }
+  .ticker b{ background:#fff; color:var(--red); padding:1px 8px; border-radius:2px; }
+  footer{
+    background:var(--ink);
+    color:var(--paper-2);
+    text-align:center;
+    padding:26px 20px;
+    font-size:.8rem;
+  }
+  footer p{ opacity:.7; margin-top:6px; }
+  @media (max-width:720px){
+    .hero{ grid-template-columns:1fr; }
+    .grid{ grid-template-columns:1fr; }
+    .masthead h1{ font-size:2.1rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <span id="tanggal">Kamis, 3 September 2026</span>
+    <span>Jakarta 29°C</span>
+  </div>
+  <header class="masthead">
+    <h1>WARTA<span>KINI</span></h1>
+    <p>Kabar terkini dari seluruh penjuru — cepat, akurat, tepercaya</p>
+  </header>
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Nasional</a>
+    <a href="#">Ekonomi</a>
+    <a href="#">Olahraga</a>
+    <a href="#">Teknologi</a>
+    <a href="#">Hiburan</a>
+    <a href="#">Otomotif</a>
+    <a href="#">Internasional</a>
+  </nav>
+  <div class="ticker">
+    <b>TERBARU</b>
+    <span>Ini contoh berita berjalan — ganti dengan headline asli kamu di sini.</span>
+  </div>
+  <main>
+    <section class="hero">
+      <div class="hero-main">
+        <div class="img-ph">Gambar Headline</div>
+        <span class="tag">NASIONAL</span>
+        <h2>Judul Berita Utama Diletakkan di Sini, Buat Sekilas Menjelaskan Isinya</h2>
+        <p>Ini paragraf ringkasan berita utama. Ganti dengan lead berita asli.</p>
+      </div>
+      <div class="hero-side">
+        <div class="item">
+          <span class="num">01</span>
+          <div>
+            <span class="tag">EKONOMI</span>
+            <h3>Judul berita kedua yang cukup menarik perhatian pembaca</h3>
+          </div>
+        </div>
+        <div class="item">
+          <span class="num">02</span>
+          <div>
+            <span class="tag">TEKNOLOGI</span>
+            <h3>Judul berita ketiga soal perkembangan teknologi terbaru</h3>
+          </div>
+        </div>
+        <div class="item">
+          <span class="num">03</span>
+          <div>
+            <span class="tag">OLAHRAGA</span>
+            <h3>Judul berita keempat tentang hasil pertandingan semalam</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-title"><div class="bar"></div><h2>Terpopuler</h2></div>
+    <div class="grid">
+      <div class="card">
+        <div class="img-ph">Gambar</div>
+        <span class="tag">OTOMOTIF</span>
+        <h3>Contoh judul berita populer nomor satu di kategori ini</h3>
+        <p>Cuplikan singkat isi berita untuk menarik pembaca mengklik.</p>
+      </div>
+      <div class="card">
+        <div class="img-ph">Gambar</div>
+        <span class="tag">HIBURAN</span>
+        <h3>Contoh judul berita populer nomor dua di kategori ini</h3>
+        <p>Cuplikan singkat isi berita untuk menarik pembaca mengklik.</p>
+      </div>
+      <div class="card">
+        <div class="img-ph">Gambar</div>
+        <span class="tag">INTERNASIONAL</span>
+        <h3>Contoh judul berita populer nomor tiga di kategori ini</h3>
+        <p>Cuplikan singkat isi berita untuk menarik pembaca mengklik.</p>
+      </div>
+    </div>
+    <div class="section-title"><div class="bar"></div><h2>Ekonomi</h2></div>
+    <div class="grid">
+      <div class="card">
+        <div class="img-ph">Gambar</div>
+        <h3>Judul berita ekonomi pertama yang bisa kamu ganti nanti</h3>
+        <p>Ringkasan singkat berita ekonomi.</p>
+      </div>
+      <div class="card">
+        <div class="img-ph">Gambar</div>
+        <h3>Judul berita ekonomi kedua yang bisa kamu ganti nanti</h3>
+        <p>Ringkasan singkat berita ekonomi.</p>
+      </div>
+      <div class="card">
+        <div class="img-ph">Gambar</div>
+        <h3>Judul berita ekonomi ketiga yang bisa kamu ganti nanti</h3>
+        <p>Ringkasan singkat berita ekonomi.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>WARTAKINI</div>
+    <p>© 2026 WartaKini. Situs ini adalah kerangka awal — isi dan kembangkan sesuai kebutuhan.</p>
+  </footer>
+<script>
+  const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+  const bulan=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  const d=new Date();
+  document.getElementById('tanggal').textContent = `${hari[d.getDay()]}, ${d.getDate()} ${bulan[d.getMonth()]} ${d.getFullYear()}`;
+</script>
+</body>
+</html>
