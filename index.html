@@ -10,114 +10,27 @@
     --paper:#f7f4ec;
     --paper-2:#efe9d8;
     --red:#b3231c;
-    --gold:#a9772c;
     --line:#d9d1bb;
     --gray:#5c5a52;
     --font-head: Georgia, 'Times New Roman', serif;
     --font-body: 'Trebuchet MS', 'Segoe UI', sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--font-body);
-    line-height:1.6;
-  }
-  a{color:inherit; text-decoration:none;}
-  .topbar{
-    background:var(--ink);
-    color:var(--paper);
-    font-size:0.78rem;
-    padding:6px 20px;
-    display:flex;
-    justify-content:space-between;
-    letter-spacing:.02em;
-  }
-  .masthead{
-    padding:22px 20px 14px;
-    text-align:center;
-    border-bottom:3px solid var(--ink);
-  }
-  .masthead h1{
-    font-family:var(--font-head);
-    font-size:3rem;
-    font-weight:700;
-    letter-spacing:.01em;
-  }
+  body{ background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.6; }
+  a{ color:inherit; text-decoration:none; }
+  .topbar{ background:var(--ink); color:var(--paper); font-size:.78rem; padding:6px 20px; display:flex; justify-content:space-between; }
+  .masthead{ padding:22px 20px 14px; text-align:center; border-bottom:3px solid var(--ink); }
+  .masthead h1{ font-family:var(--font-head); font-size:3rem; font-weight:700; }
   .masthead h1 span{ color:var(--red); }
-  .masthead p{
-    color:var(--gray);
-    font-size:.85rem;
-    margin-top:4px;
-  }
-  nav{
-    background:var(--paper-2);
-    border-bottom:1px solid var(--line);
-    display:flex;
-    gap:22px;
-    padding:10px 20px;
-    overflow-x:auto;
-    font-size:.85rem;
-    font-weight:600;
-  }
-  main{
-    max-width:760px;
-    margin:0 auto;
-    padding:24px 20px 60px;
-  }
-  .tag{
-    color:var(--red);
-    font-weight:700;
-    font-size:.78rem;
-    letter-spacing:.02em;
-  }
-  article h1.title{
-    font-family:var(--font-head);
-    font-size:1.9rem;
-    line-height:1.2;
-    margin:10px 0 8px;
-  }
-  .byline{
-    color:var(--gray);
-    font-size:.82rem;
-    font-style:italic;
-    margin-bottom:18px;
-  }
-  .img-ph{
-    background:linear-gradient(135deg,var(--paper-2),var(--line));
-    border:1px solid var(--line);
-    aspect-ratio:16/9;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--gray);
-    font-size:.8rem;
-    margin-bottom:18px;
-  }
-  article p{
-    margin-bottom:16px;
-    font-size:1rem;
-    color:#2a2a24;
-  }
-  article p.note{
-    font-size:.85rem;
-    font-style:italic;
-    color:var(--gray);
-    border-top:1px solid var(--line);
-    padding-top:14px;
-    margin-top:20px;
-  }
-  footer{
-    background:var(--ink);
-    color:var(--paper-2);
-    text-align:center;
-    padding:26px 20px;
-    font-size:.8rem;
-  }
+  .masthead p{ color:var(--gray); font-size:.85rem; margin-top:4px; }
+  nav{ background:var(--paper-2); border-bottom:1px solid var(--line); display:flex; gap:22px; padding:10px 20px; overflow-x:auto; font-size:.85rem; font-weight:600; }
+  main{ max-width:760px; margin:0 auto; padding:24px 20px 60px; }
+  .card{ display:block; padding:20px 0; border-bottom:1px solid var(--line); }
+  .card .tag{ color:var(--red); font-weight:700; font-size:.75rem; }
+  .card h2{ font-family:var(--font-head); font-size:1.4rem; margin:8px 0 6px; line-height:1.25; }
+  .card p{ color:var(--gray); font-size:.9rem; }
+  footer{ background:var(--ink); color:var(--paper-2); text-align:center; padding:26px 20px; font-size:.8rem; }
   footer p{ opacity:.7; margin-top:6px; }
-  @media (max-width:720px){
-    .masthead h1{ font-size:2.1rem; }
-  }
 </style>
 </head>
 <body>
@@ -130,7 +43,7 @@
     <p>Kabar terkini dari seluruh penjuru — cepat, akurat, tepercaya</p>
   </header>
   <nav>
-    <a href="#">Beranda</a>
+    <a href="index.html">Beranda</a>
     <a href="#">Industri</a>
     <a href="#">Ketenagakerjaan</a>
     <a href="#">Lingkungan</a>
@@ -138,26 +51,23 @@
   </nav>
 
   <main>
-    <article>
+    <a class="card" href="artikel3.html">
+      <span class="tag">LINGKUNGAN &amp; DAERAH</span>
+      <h2>Krisis Air di Tengah Kemarau Panjang: Cerita dari Lembang Sillanan, Tana Toraja</h2>
+      <p>Satu-satunya sumber air di kampung mulai menipis. Begini cerita warga Lembang Sillanan bertahan di tengah kemarau ekstrem yang melanda Tana Toraja.</p>
+    </a>
+
+    <a class="card" href="artikel2.html">
+      <span class="tag">KESEHARIAN KERJA</span>
+      <h2>Sistem Makan Karyawan di Kawasan IMIP: Dari Rantang, Box, Sampai Mobil Catering</h2>
+      <p>Jam makan karyawan ternyata mengikuti pola shift kerja masing-masing — dari sistem rantang hingga jadwal mobil catering yang terstruktur rapi.</p>
+    </a>
+
+    <a class="card" href="artikel1.html">
       <span class="tag">INDUSTRI &amp; KETENAGAKERJAAN</span>
-      <h1 class="title">Menyusuri IMIP: Cerita dari Balik Antrean Halte Bus Karyawan</h1>
-      <p class="byline">Ditulis berdasarkan pengalaman langsung seorang karyawan di kawasan industri, dilengkapi data dan laporan lapangan.</p>
-      <div class="img-ph">Gambar Ilustrasi</div>
-
-      <p>Setiap pagi, ribuan karyawan di kawasan Indonesia Morowali Industrial Park (IMIP) memulai hari dengan rutinitas yang sama — jalan kaki menuju halte, mengantre bus, lalu menempuh perjalanan ke tempat kerja masing-masing. Berikut gambaran dari sudut pandang salah satu karyawan yang tinggal di kos sekitar jalan poros.</p>
-
-      <p>Perjalanan biasanya dimulai dengan jalan kaki 15–20 menit menuju halte, dilanjutkan lewat beberapa titik transit — Halte Pos 1 SMI, Halte HPL, hingga Halte Rusun — sebelum akhirnya sampai di perusahaan tempat bekerja. Namun rute ini tidak berlaku sama untuk semua orang; ada yang naik motor pribadi, ada yang lewat jalur Pos 3, dan jam kerja pun berbeda-beda tergantung perusahaan tempat masing-masing bertugas.</p>
-
-      <p>Fasilitas bus antar-jemput gratis dari perusahaan sebenarnya cukup membantu, tapi bukan tanpa kendala. Waktu tunggu di halte kadang lama karena bus tak kunjung datang, ditambah budaya antre yang belum tertib membuat suasana naik bus sering berdesak-desakan.</p>
-
-      <p>Soal rekrutmen, sistem pendaftaran IMIP diketahui terus berubah dari waktu ke waktu. Bagi yang berminat melamar kerja, disarankan mengecek langsung informasi resmi terbaru dari IMIP, bukan hanya dari artikel ini.</p>
-
-      <p><strong>Di balik pertumbuhan pesatnya, kawasan ini juga menghadapi persoalan yang tak kalah nyata.</strong> Sebagai motor utama hilirisasi nikel nasional, IMIP menampung puluhan ribu pekerja — mencapai 89.849 orang pada awal 2026. Namun, warga di desa-desa sekitar kawasan berulang kali menyuarakan keluhan soal polusi udara, terutama dari aktivitas PLTU batu bara yang menunjang operasional pabrik. Penelitian independen bahkan mencatat kadar debu dan sulfur dioksida di sejumlah desa sudah melebihi ambang batas aman, dan angka kasus ISPA di sekitar kawasan tercatat cukup tinggi. Aksi protes warga soal debu dan asap ini pun beberapa kali terjadi hingga tahun ini.</p>
-
-      <p>Selain isu lingkungan, keamanan kendaraan juga jadi keresahan yang terus berulang. Pencurian motor di area parkiran maupun di sekitar tempat kos karyawan bukan lagi kejadian langka — sejumlah pekerja bahkan menyebut hampir setiap hari ada laporan motor hilang di lingkungan kerja. Persoalan ini sempat berujung tragis pada pertengahan 2025, ketika seorang karyawan tewas akibat main hakim sendiri usai dituduh mencuri motor — sebuah pengingat bahwa persoalan keamanan di kawasan ini sudah cukup mendesak untuk mendapat perhatian serius.</p>
-
-      <p class="note">Artikel ini ditulis berdasarkan pengalaman langsung penulis sebagai karyawan di kawasan IMIP, dilengkapi data dari sejumlah laporan lapangan dan penelitian terkait.</p>
-    </article>
+      <h2>Menyusuri IMIP: Cerita dari Balik Antrean Halte Bus Karyawan</h2>
+      <p>Rute perjalanan dari kos menuju area kerja, fasilitas bus gratis, hingga isu lingkungan dan keamanan yang membayangi kawasan industri ini.</p>
+    </a>
   </main>
 
   <footer>
