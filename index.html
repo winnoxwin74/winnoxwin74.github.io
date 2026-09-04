@@ -3,34 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WARTAKINI — Kabar Terkini, Tepercaya</title>
+<title>WartaKini — Fakta dari yang mengalami langsung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#141b2e;
-    --paper:#f7f4ec;
-    --paper-2:#efe9d8;
-    --red:#b3231c;
-    --line:#d9d1bb;
-    --gray:#5c5a52;
-    --font-head: Georgia, 'Times New Roman', serif;
-    --font-body: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    --ink:#1c2430;
+    --paper:#f6f1e7;
+    --rule:#d8cdb0;
+    --sub:#6b6355;
+    --industri:#8b3a2f;
+    --lingkungan:#4a6741;
+    --keseharian:#6b5b95;
+    --brand:#8b3a2f;
+    --font-head: 'Newsreader', Georgia, serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  body{ background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.6; }
+  body{ background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.6; -webkit-font-smoothing:antialiased; }
   a{ color:inherit; text-decoration:none; }
-  .topbar{ background:var(--ink); color:var(--paper); font-size:.78rem; padding:6px 20px; display:flex; justify-content:space-between; }
-  .masthead{ padding:22px 20px 14px; text-align:center; border-bottom:3px solid var(--ink); }
-  .masthead h1{ font-family:var(--font-head); font-size:3rem; font-weight:700; }
-  .masthead h1 span{ color:var(--red); }
-  .masthead p{ color:var(--gray); font-size:.85rem; margin-top:4px; }
-  nav{ background:var(--paper-2); border-bottom:1px solid var(--line); display:flex; gap:22px; padding:10px 20px; overflow-x:auto; font-size:.85rem; font-weight:600; }
-  main{ max-width:760px; margin:0 auto; padding:24px 20px 60px; }
-  .card{ display:block; padding:20px 0; border-bottom:1px solid var(--line); }
-  .card .tag{ color:var(--red); font-weight:700; font-size:.75rem; }
-  .card h2{ font-family:var(--font-head); font-size:1.4rem; margin:8px 0 6px; line-height:1.25; }
-  .card p{ color:var(--gray); font-size:.9rem; }
-  footer{ background:var(--ink); color:var(--paper-2); text-align:center; padding:26px 20px; font-size:.8rem; }
-  footer p{ opacity:.7; margin-top:6px; }
+  .topbar{ background:var(--ink); color:var(--paper); font-size:.75rem; padding:7px 20px; display:flex; justify-content:space-between; letter-spacing:.01em; }
+  .masthead{ padding:32px 20px 14px; text-align:center; }
+  .logo{ display:inline-block; font-family:var(--font-head); font-size:1.9rem; font-weight:700; letter-spacing:-.01em; background:var(--brand); color:var(--paper); padding:.25em .5em .3em; border-radius:3px; }
+  .masthead p{ color:var(--sub); font-size:.85rem; margin-top:12px; }
+  .rule{ height:1px; background:var(--rule); margin:0 20px; }
+  .rule.thick{ height:2px; background:var(--ink); }
+  nav{ display:flex; gap:20px; padding:12px 20px; overflow-x:auto; font-size:.82rem; font-weight:500; color:var(--sub); }
+  nav a.active{ color:var(--ink); font-weight:600; }
+  main{ max-width:640px; margin:0 auto; padding:8px 20px 60px; }
+  .card{ display:block; padding:24px 0; border-bottom:1px solid var(--rule); }
+  .card:first-child{ padding-top:16px; }
+  .card .meta{ display:flex; align-items:center; gap:7px; margin-bottom:8px; }
+  .card .dot{ width:7px; height:7px; border-radius:50%; }
+  .card .tag{ font-size:.78rem; font-weight:500; }
+  .card h2{ font-family:var(--font-head); font-size:1.5rem; font-weight:600; line-height:1.25; margin-bottom:8px; }
+  .card p{ color:var(--sub); font-size:.92rem; line-height:1.5; }
+  .tag-industri, .dot-industri{ color:var(--industri); background:var(--industri); }
+  .tag-lingkungan, .dot-lingkungan{ color:var(--lingkungan); background:var(--lingkungan); }
+  .tag-keseharian, .dot-keseharian{ color:var(--keseharian); background:var(--keseharian); }
+  .dot-industri, .dot-lingkungan, .dot-keseharian{ color:transparent; }
+  footer{ text-align:center; padding:30px 20px 40px; font-size:.8rem; color:var(--sub); }
+  footer .name{ font-family:var(--font-head); font-style:italic; font-weight:600; color:var(--ink); margin-bottom:6px; }
 </style>
 </head>
 <body>
@@ -39,11 +52,12 @@
     <span>Jakarta 29°C</span>
   </div>
   <header class="masthead">
-    <h1>WARTA<span>KINI</span></h1>
-    <p>Kabar terkini dari seluruh penjuru — cepat, akurat, tepercaya</p>
+    <div class="logo">WartaKini</div>
+    <p>Fakta dari yang mengalami langsung</p>
   </header>
+  <div class="rule thick"></div>
   <nav>
-    <a href="index.html">Beranda</a>
+    <a href="index.html" class="active">Beranda</a>
     <a href="#">Industri</a>
     <a href="#">Ketenagakerjaan</a>
     <a href="#">Lingkungan</a>
@@ -52,26 +66,26 @@
 
   <main>
     <a class="card" href="artikel3.html">
-      <span class="tag">LINGKUNGAN &amp; DAERAH</span>
+      <div class="meta"><span class="dot dot-lingkungan"></span><span class="tag tag-lingkungan">Lingkungan &amp; Daerah</span></div>
       <h2>Krisis Air di Tengah Kemarau Panjang: Cerita dari Lembang Sillanan, Tana Toraja</h2>
       <p>Satu-satunya sumber air di kampung mulai menipis. Begini cerita warga Lembang Sillanan bertahan di tengah kemarau ekstrem yang melanda Tana Toraja.</p>
     </a>
 
     <a class="card" href="artikel2.html">
-      <span class="tag">KESEHARIAN KERJA</span>
+      <div class="meta"><span class="dot dot-keseharian"></span><span class="tag tag-keseharian">Keseharian Kerja</span></div>
       <h2>Sistem Makan Karyawan di Kawasan IMIP: Dari Rantang, Box, Sampai Mobil Catering</h2>
       <p>Jam makan karyawan ternyata mengikuti pola shift kerja masing-masing — dari sistem rantang hingga jadwal mobil catering yang terstruktur rapi.</p>
     </a>
 
     <a class="card" href="artikel1.html">
-      <span class="tag">INDUSTRI &amp; KETENAGAKERJAAN</span>
+      <div class="meta"><span class="dot dot-industri"></span><span class="tag tag-industri">Industri &amp; Ketenagakerjaan</span></div>
       <h2>Menyusuri IMIP: Cerita dari Balik Antrean Halte Bus Karyawan</h2>
       <p>Rute perjalanan dari kos menuju area kerja, fasilitas bus gratis, hingga isu lingkungan dan keamanan yang membayangi kawasan industri ini.</p>
     </a>
   </main>
 
   <footer>
-    <div>WARTAKINI</div>
+    <div class="name">WartaKini</div>
     <p>© 2026 WartaKini. Semua konten ditulis berdasarkan pengalaman dan riset penulis.</p>
   </footer>
 
