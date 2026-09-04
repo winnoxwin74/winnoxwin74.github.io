@@ -3,31 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistem Makan Karyawan IMIP — WARTAKINI</title>
+<title>Sistem Makan Karyawan IMIP — WartaKini</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#141b2e; --paper:#f7f4ec; --paper-2:#efe9d8; --red:#b3231c; --line:#d9d1bb; --gray:#5c5a52;
-    --font-head: Georgia, 'Times New Roman', serif; --font-body: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    --ink:#1c2430; --paper:#f6f1e7; --rule:#d8cdb0; --sub:#6b6355; --keseharian:#6b5b95; --brand:#8b3a2f;
+    --font-head: 'Newsreader', Georgia, serif; --font-body: 'Inter', -apple-system, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  body{ background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.6; }
+  body{ background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.65; -webkit-font-smoothing:antialiased; }
   a{ color:inherit; text-decoration:none; }
-  .topbar{ background:var(--ink); color:var(--paper); font-size:.78rem; padding:6px 20px; display:flex; justify-content:space-between; }
-  .masthead{ padding:22px 20px 14px; text-align:center; border-bottom:3px solid var(--ink); }
-  .masthead h1{ font-family:var(--font-head); font-size:3rem; font-weight:700; }
-  .masthead h1 span{ color:var(--red); }
-  .masthead p{ color:var(--gray); font-size:.85rem; margin-top:4px; }
-  nav{ background:var(--paper-2); border-bottom:1px solid var(--line); display:flex; gap:22px; padding:10px 20px; overflow-x:auto; font-size:.85rem; font-weight:600; }
-  main{ max-width:760px; margin:0 auto; padding:24px 20px 60px; }
-  .tag{ color:var(--red); font-weight:700; font-size:.78rem; }
-  article h1.title{ font-family:var(--font-head); font-size:1.9rem; line-height:1.2; margin:10px 0 8px; }
-  .byline{ color:var(--gray); font-size:.82rem; font-style:italic; margin-bottom:18px; }
-  .img-ph{ background:linear-gradient(135deg,var(--paper-2),var(--line)); border:1px solid var(--line); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; color:var(--gray); font-size:.8rem; margin-bottom:18px; }
-  article p{ margin-bottom:16px; font-size:1rem; color:#2a2a24; }
-  article p.note{ font-size:.85rem; font-style:italic; color:var(--gray); border-top:1px solid var(--line); padding-top:14px; margin-top:20px; }
-  .back{ display:inline-block; margin-top:24px; font-size:.85rem; color:var(--red); font-weight:600; }
-  footer{ background:var(--ink); color:var(--paper-2); text-align:center; padding:26px 20px; font-size:.8rem; }
-  footer p{ opacity:.7; margin-top:6px; }
+  .topbar{ background:var(--ink); color:var(--paper); font-size:.75rem; padding:7px 20px; display:flex; justify-content:space-between; }
+  .masthead{ padding:28px 20px 12px; text-align:center; }
+  .logo{ display:inline-block; font-family:var(--font-head); font-size:1.6rem; font-weight:700; letter-spacing:-.01em; background:var(--brand); color:var(--paper); padding:.2em .5em .25em; border-radius:3px; }
+  .rule.thick{ height:2px; background:var(--ink); margin:0 20px; }
+  nav{ display:flex; gap:20px; padding:12px 20px; overflow-x:auto; font-size:.82rem; font-weight:500; color:var(--sub); }
+  main{ max-width:640px; margin:0 auto; padding:16px 20px 60px; }
+  .tag{ color:var(--keseharian); font-weight:500; font-size:.8rem; }
+  article h1.title{ font-family:var(--font-head); font-size:1.9rem; font-weight:600; line-height:1.2; margin:10px 0 8px; }
+  .byline{ color:var(--sub); font-size:.85rem; margin-bottom:20px; }
+  .img-ph{ background:linear-gradient(135deg,#efe6d3,var(--rule)); border-radius:2px; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; color:var(--sub); font-size:.78rem; margin-bottom:22px; }
+  article p{ margin-bottom:17px; font-size:1.02rem; color:#2b2a24; }
+  article p.note{ font-size:.85rem; color:var(--sub); border-top:1px solid var(--rule); padding-top:16px; margin-top:22px; }
+  .back{ display:inline-block; margin-top:22px; font-size:.85rem; color:var(--keseharian); font-weight:500; }
+  footer{ text-align:center; padding:30px 20px 40px; font-size:.8rem; color:var(--sub); }
+  footer .name{ font-family:var(--font-head); font-style:italic; font-weight:600; color:var(--ink); margin-bottom:6px; }
 </style>
 </head>
 <body>
@@ -36,9 +37,9 @@
     <span>Jakarta 29°C</span>
   </div>
   <header class="masthead">
-    <h1>WARTA<span>KINI</span></h1>
-    <p>Kabar terkini dari seluruh penjuru — cepat, akurat, tepercaya</p>
+    <div class="logo">WartaKini</div>
   </header>
+  <div class="rule thick"></div>
   <nav>
     <a href="index.html">Beranda</a>
     <a href="#">Industri</a>
@@ -49,7 +50,7 @@
 
   <main>
     <article>
-      <span class="tag">KESEHARIAN KERJA</span>
+      <span class="tag">Keseharian Kerja</span>
       <h1 class="title">Sistem Makan Karyawan di Kawasan IMIP: Dari Rantang, Box, Sampai Mobil Catering</h1>
       <p class="byline">Ditulis berdasarkan pengalaman langsung seorang karyawan di kawasan industri.</p>
       <div class="img-ph">Gambar Ilustrasi</div>
@@ -73,7 +74,7 @@
   </main>
 
   <footer>
-    <div>WARTAKINI</div>
+    <div class="name">WartaKini</div>
     <p>© 2026 WartaKini. Semua konten ditulis berdasarkan pengalaman dan riset penulis.</p>
   </footer>
 
