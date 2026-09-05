@@ -6,6 +6,7 @@
   --industri:#8b3a2f;
   --lingkungan:#3d5636;
   --keseharian:#5c4a80;
+  --budaya:#96702c;
   --brand:#8b3a2f;
   --font-head: 'Newsreader', Georgia, serif;
   --font-body: 'Inter', -apple-system, sans-serif;
@@ -41,9 +42,11 @@ main{ max-width:640px; margin:0 auto; padding:8px 20px 60px; }
 .tag-industri{ color:var(--industri); }
 .tag-lingkungan{ color:var(--lingkungan); }
 .tag-keseharian{ color:var(--keseharian); }
+.tag-budaya{ color:var(--budaya); }
 .dot-industri{ background:var(--industri); }
 .dot-lingkungan{ background:var(--lingkungan); }
 .dot-keseharian{ background:var(--keseharian); }
+.dot-budaya{ background:var(--budaya); }
 
 article h1.title{ font-family:var(--font-head); font-size:1.9rem; font-weight:600; line-height:1.2; margin:10px 0 8px; }
 .byline{ color:var(--sub); font-size:.85rem; margin-bottom:20px; }
@@ -54,6 +57,7 @@ article p.note{ font-size:.85rem; color:var(--sub); border-top:1px solid var(--r
 .back.back-industri{ color:var(--industri); }
 .back.back-keseharian{ color:var(--keseharian); }
 .back.back-lingkungan{ color:var(--lingkungan); }
+.back.back-budaya{ color:var(--budaya); }
 
 footer{ text-align:center; padding:30px 20px 40px; font-size:.8rem; color:var(--sub); }
 footer .name{ font-family:var(--font-head); font-style:italic; font-weight:600; color:var(--ink); margin-bottom:6px; }
