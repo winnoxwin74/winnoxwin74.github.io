@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lingkungan & Daerah — WartaKini</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%238b3a2f'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' font-weight='700' fill='%23f6f1e7' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span id="tanggal">Kamis, 3 September 2026</span>
+    <span>Jakarta 29°C</span>
+  </div>
+  <header class="masthead">
+    <div class="logo">WartaKini</div>
+  </header>
+  <div class="rule thick"></div>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="industri.html">Industri</a>
+    <a href="keseharian.html">Keseharian</a>
+    <a href="lingkungan.html" class="active">Lingkungan</a>
+    <a href="budaya.html">Budaya</a>
+  </nav>
+
+  <main>
+    <a class="card" href="artikel3.html">
+      <div class="thumb"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block"><rect width="100" height="100" fill="#eee3cf"/><circle cx="70" cy="28" r="12" fill="#c98a3e"/><rect x="10" y="55" width="80" height="35" fill="#a97a4a"/><g stroke="#7a5633" stroke-width="2" fill="none"><path d="M20 55 L35 75 L28 90"/><path d="M35 75 L55 68 L60 90"/><path d="M55 68 L70 55"/><path d="M70 55 L80 78 L90 90"/></g></svg></div>
+      <div class="body">
+        <div class="meta"><span class="dot dot-lingkungan"></span><span class="tag tag-lingkungan">Lingkungan &amp; Daerah</span></div>
+        <h2>Krisis Air di Tengah Kemarau Panjang: Cerita dari Lembang Sillanan, Tana Toraja</h2>
+        <p>Satu-satunya sumber air di kampung mulai menipis. Begini cerita warga Lembang Sillanan bertahan di tengah kemarau ekstrem yang melanda Tana Toraja.</p>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <div class="name">WartaKini</div>
+    <p>© 2026 WartaKini. Semua konten ditulis berdasarkan pengalaman dan riset penulis.</p>
+    <div class="flinks"><a href="tentang.html">Tentang</a>·<a href="kontak.html">Kontak</a>·<a href="privasi.html">Kebijakan Privasi</a></div>
+  </footer>
+
+<script>
+  const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+  const bulan=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  const d=new Date();
+  document.getElementById('tanggal').textContent = `${hari[d.getDay()]}, ${d.getDate()} ${bulan[d.getMonth()]} ${d.getFullYear()}`;
+</script>
+</body>
+</html>
