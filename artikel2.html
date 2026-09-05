@@ -53,4 +53,23 @@
 
       <p>Perlu dicatat, pola jadwal ini bersifat spesifik di tempat penulis bekerja, dan belum tentu berlaku sama di seluruh perusahaan dalam kawasan IMIP, mengingat setiap perusahaan memiliki jam operasional yang berbeda-beda. Soal struktur pengelolaan pihak catering secara keseluruhan pun, penulis mengaku belum memiliki informasi yang cukup karena bukan bagian dari divisi tersebut.</p>
 
-      <p class="note">Artikel ini ditulis
+      <p class="note">Artikel ini ditulis berdasarkan pengalaman langsung penulis sebagai karyawan di kawasan IMIP.</p>
+
+      <a class="back back-keseharian" href="index.html">← Kembali ke Beranda</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="name">WartaKini</div>
+    <p>© 2026 WartaKini. Semua konten ditulis berdasarkan pengalaman dan riset penulis.</p>
+    <div class="flinks"><a href="tentang.html">Tentang</a>·<a href="kontak.html">Kontak</a>·<a href="privasi.html">Kebijakan Privasi</a></div>
+  </footer>
+
+<script>
+  const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+  const bulan=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  const d=new Date();
+  document.getElementById('tanggal').textContent = `${hari[d.getDay()]}, ${d.getDate()} ${bulan[d.getMonth()]} ${d.getFullYear()}`;
+</script>
+</body>
+</html>
