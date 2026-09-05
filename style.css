@@ -57,3 +57,5 @@ article p.note{ font-size:.85rem; color:var(--sub); border-top:1px solid var(--r
 
 footer{ text-align:center; padding:30px 20px 40px; font-size:.8rem; color:var(--sub); }
 footer .name{ font-family:var(--font-head); font-style:italic; font-weight:600; color:var(--ink); margin-bottom:6px; }
+footer .flinks{ margin-top:10px; }
+footer .flinks a{ margin:0 8px; text-decoration:underline; }
