@@ -1,0 +1,59 @@
+:root{
+  --ink:#1c2430;
+  --paper:#f6f1e7;
+  --rule:#d8cdb0;
+  --sub:#6b6355;
+  --industri:#8b3a2f;
+  --lingkungan:#3d5636;
+  --keseharian:#5c4a80;
+  --brand:#8b3a2f;
+  --font-head: 'Newsreader', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{ background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+a{ color:inherit; text-decoration:none; }
+
+.topbar{ background:var(--ink); color:var(--paper); font-size:.75rem; padding:7px 20px; display:flex; justify-content:space-between; letter-spacing:.01em; }
+
+.masthead{ padding:32px 20px 14px; text-align:center; }
+.logo{ display:inline-block; font-family:var(--font-head); font-size:1.9rem; font-weight:700; letter-spacing:-.01em; background:var(--brand); color:var(--paper); padding:.25em .5em .3em; border-radius:3px; }
+.masthead p{ color:var(--sub); font-size:.85rem; margin-top:12px; }
+
+.rule{ height:1px; background:var(--rule); margin:0 20px; }
+.rule.thick{ height:2px; background:var(--ink); }
+
+nav{ display:flex; gap:20px; padding:12px 20px; overflow-x:auto; font-size:.82rem; font-weight:500; color:var(--sub); }
+nav a.active{ color:var(--ink); font-weight:600; }
+
+main{ max-width:640px; margin:0 auto; padding:8px 20px 60px; }
+
+.card{ display:flex; gap:14px; padding:20px 0; border-bottom:1px solid var(--rule); }
+.card:first-child{ padding-top:16px; }
+.card .thumb{ flex-shrink:0; width:88px; height:88px; border-radius:4px; overflow:hidden; background:#eee3cf; }
+.card .body{ flex:1; min-width:0; }
+.card .meta{ display:flex; align-items:center; gap:7px; margin-bottom:6px; }
+.card .dot{ width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+.card .tag{ font-size:.78rem; font-weight:600; }
+.card h2{ font-family:var(--font-head); font-size:1.15rem; font-weight:600; line-height:1.28; margin-bottom:6px; }
+.card p{ color:var(--sub); font-size:.86rem; line-height:1.45; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+.tag-industri{ color:var(--industri); }
+.tag-lingkungan{ color:var(--lingkungan); }
+.tag-keseharian{ color:var(--keseharian); }
+.dot-industri{ background:var(--industri); }
+.dot-lingkungan{ background:var(--lingkungan); }
+.dot-keseharian{ background:var(--keseharian); }
+
+article h1.title{ font-family:var(--font-head); font-size:1.9rem; font-weight:600; line-height:1.2; margin:10px 0 8px; }
+.byline{ color:var(--sub); font-size:.85rem; margin-bottom:20px; }
+.img-ph{ background:linear-gradient(135deg,#efe6d3,var(--rule)); border-radius:2px; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; color:var(--sub); font-size:.78rem; margin-bottom:22px; overflow:hidden; }
+article p{ margin-bottom:17px; font-size:1.02rem; color:#2b2a24; }
+article p.note{ font-size:.85rem; color:var(--sub); border-top:1px solid var(--rule); padding-top:16px; margin-top:22px; }
+.back{ display:inline-block; margin-top:22px; font-size:.85rem; font-weight:500; }
+.back.back-industri{ color:var(--industri); }
+.back.back-keseharian{ color:var(--keseharian); }
+.back.back-lingkungan{ color:var(--lingkungan); }
+
+footer{ text-align:center; padding:30px 20px 40px; font-size:.8rem; color:var(--sub); }
+footer .name{ font-family:var(--font-head); font-style:italic; font-weight:600; color:var(--ink); margin-bottom:6px; }
