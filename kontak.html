@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak — WartaKini</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%238b3a2f'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' font-weight='700' fill='%23f6f1e7' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span id="tanggal">Kamis, 3 September 2026</span>
+    <span>Jakarta 29°C</span>
+  </div>
+  <header class="masthead">
+    <div class="logo">WartaKini</div>
+  </header>
+  <div class="rule thick"></div>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="#">Industri</a>
+    <a href="#">Ketenagakerjaan</a>
+    <a href="#">Lingkungan</a>
+    <a href="#">Daerah</a>
+  </nav>
+
+  <main>
+    <article>
+      <h1 class="title">Kontak</h1>
+      <p class="byline">Punya masukan, koreksi, atau cerita untuk dibagikan?</p>
+
+      <p>Kami terbuka menerima kritik, saran, koreksi atas artikel yang sudah tayang, maupun cerita baru dari pembaca yang ingin berbagi pengalaman serupa dengan yang kami tulis di WartaKini.</p>
+
+      <p>Silakan kirimkan pesan Anda melalui email berikut:</p>
+
+      <p style="font-size:1.15rem; font-weight:600;"><a href="mailto:wartakini.redaksi@gmail.com">wartakini.redaksi@gmail.com</a></p>
+
+      <p>Kami akan berusaha membalas setiap pesan yang masuk sesegera mungkin. Mohon maaf apabila balasan memerlukan waktu, mengingat WartaKini saat ini dikelola secara independen.</p>
+
+      <a class="back back-industri" href="index.html">← Kembali ke Beranda</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="name">WartaKini</div>
+    <p>© 2026 WartaKini. Semua konten ditulis berdasarkan pengalaman dan riset penulis.</p>
+    <div class="flinks"><a href="tentang.html">Tentang</a>·<a href="kontak.html">Kontak</a>·<a href="privasi.html">Kebijakan Privasi</a></div>
+  </footer>
+
+<script>
+  const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+  const bulan=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  const d=new Date();
+  document.getElementById('tanggal').textContent = `${hari[d.getDay()]}, ${d.getDate()} ${bulan[d.getMonth()]} ${d.getFullYear()}`;
+</script>
+</body>
+</html>
