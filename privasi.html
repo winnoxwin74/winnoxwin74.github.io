@@ -19,7 +19,7 @@
 <body>
   <div class="topbar">
     <span id="tanggal">Kamis, 3 September 2026</span>
-    <span>Jakarta 29°C</span>
+    <span id="cuaca">Jakarta 29°C</span>
   </div>
   <header class="masthead">
     <div class="logo">WartaKini</div>
@@ -66,11 +66,6 @@
     <div class="flinks"><a href="tentang.html">Tentang</a>·<a href="kontak.html">Kontak</a>·<a href="privasi.html">Kebijakan Privasi</a></div>
   </footer>
 
-<script>
-  const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
-  const bulan=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-  const d=new Date();
-  document.getElementById('tanggal').textContent = `${hari[d.getDay()]}, ${d.getDate()} ${bulan[d.getMonth()]} ${d.getFullYear()}`;
-</script>
+<script src="script.js"></script>
 </body>
 </html>
