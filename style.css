@@ -63,6 +63,13 @@ article p.note{ font-size:.85rem; color:var(--sub); border-top:1px solid var(--r
 .back.back-budaya{ color:var(--budaya); }
 .back.back-wisata{ color:var(--wisata); }
 
+.share{ display:flex; gap:8px; margin:20px 0; flex-wrap:wrap; }
+.share a{ padding:8px 16px; border-radius:20px; font-size:.82rem; font-weight:600; color:#fff; }
+.share .wa{ background:#25D366; }
+.share .fb{ background:#1877F2; }
+.share .tw{ background:#000; }
+.share-label{ font-size:.82rem; color:var(--sub); margin-right:4px; align-self:center; }
+
 footer{ text-align:center; padding:30px 20px 40px; font-size:.8rem; color:var(--sub); }
 footer .name{ font-family:var(--font-head); font-style:italic; font-weight:600; color:var(--ink); margin-bottom:6px; }
 footer .flinks{ margin-top:10px; }
