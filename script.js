@@ -1,3 +1,7 @@
+// ============================================
+// KODE LAMA KAMU (TIDAK DIUBAH, UTUH 100%)
+// ============================================
+
 const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
 const bulan=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
 const d=new Date();
@@ -45,3 +49,25 @@ if (articleBody) {
     byline.insertAdjacentElement('afterend', readTimeSpan);
   }
 }
+
+// ============================================
+// KODE BARU: FACT BOX OTOMATIS
+// (Ditempelkan otomatis di semua halaman artikel)
+// ============================================
+document.addEventListener("DOMContentLoaded", function() {
+  // Rem 1: Hanya jalan di halaman artikel
+  var halamanArtikel = document.querySelector("article");
+  if (!halamanArtikel) return;
+
+  // Rem 2: Cari elemen catatan kaki .note sebagai titik tempel
+  var titikTempel = document.querySelector(".note");
+  if (!titikTempel) return;
+
+  // Buat kotak fact box
+  var kotak = document.createElement("div");
+  kotak.className = "fact-box";
+  kotak.innerHTML = '<h3>📌 Catatan Redaksi WartaKini</h3><p>Artikel ini disusun berdasarkan pengalaman langsung dan observasi lapangan. Data dan kondisi dapat berubah sewaktu-waktu sesuai perkembangan di lokasi.</p>';
+
+  // Tempelkan dengan aman, tepat sebelum elemen .note
+  titikTempel.parentNode.insertBefore(kotak, titikTempel);
+});
