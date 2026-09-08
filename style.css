@@ -123,3 +123,35 @@ article blockquote{
   font-size: 1.02rem;
   border-radius: 0 4px 4px 0;
 }
+
+/* ============================================
+   KODE BARU: FACT BOX OTOMATIS
+   (Styling untuk kotak catatan redaksi)
+   ============================================ */
+.fact-box {
+  background-color: #f6f1e7;
+  border-left: 4px solid var(--brand);
+  padding: 16px 20px;
+  margin: 24px 0;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.95em;
+  color: var(--ink);
+}
+
+.fact-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-head);
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.fact-box p {
+  margin: 0;
+  line-height: 1.6;
+}
+/* ============================================
+   AKHIR KODE BARU
+   ============================================ */
