@@ -7,7 +7,19 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Artikel 15 (Terbaru) -->
+  <!-- Artikel 17 (Terbaru) -->
+  <url>
+    <loc>https://winnoxwin74.github.io/artikel17.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <!-- Artikel 16 -->
+  <url>
+    <loc>https://winnoxwin74.github.io/artikel16.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <!-- Artikel 15 -->
   <url>
     <loc>https://winnoxwin74.github.io/artikel15.html</loc>
     <lastmod>2026-09-12</lastmod>
